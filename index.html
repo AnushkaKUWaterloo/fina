@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anushka Kshirsagar - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      background-image: url('https://i.pinimg.com/736x/b4/3d/a1/b43da13fd1ca47aa9d01f2ba41ec9b80.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    /* Hover effect for navigation links */
+    header nav ul li a:hover {
+      background-color: #00bcd4;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* Active state (optional) */
+    header nav ul li a.active {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    /* Focus state for accessibility */
+    header nav ul li a:focus {
+      outline: 3px solid #00bcd4;
+    }
+
+    h1 {
+      color: #0056b3;
+    }
+
+    /* Animation for sliding in from the left */
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromLeftWithDelay {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Apply the sliding effect */
+    h2 {
+      animation: slideInFromLeft 1s ease-out forwards;
+    }
+
+    p {
+      animation: slideInFromLeftWithDelay 1.5s ease-out forwards; /* Delay by 0.5s */
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Responsive Image Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-description {
+      font-size: 1em;
+      padding: 0 10px;
+    }
+
+    /* Apply Host Grotesk font to all <p> elements */
+    p {
+      font-family: 'Host Grotesk', sans-serif;
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to Anushka's Portfolio</h1>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Hi, I'm Anushka!</h2>
+    <img src="assets/images/anushka.jpg" alt="Anushka Kshirsagar">
+
+    <p>Hey! I am Anushka Kshirsagar and welcome to my creative space! As a Global Business and Digital Arts student at the University of Waterloo, I thrive on bringing unique ideas to life through design and prototypes. I've competed in 20 hackathons across Canada, built winning projects, and loved every second of the problem-solving!! I am excited to share my passion and projects with you!</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm an extroverted student with a flair for design, coding, and public speaking. My experience includes leading workshops, hosting hackathons, and exploring the intersection of technology and creativity.</p>
+    <img src="https://via.placeholder.com/600x300" alt="Design work example">
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300" alt="Re-Branding Palmolive">
+        <div class="portfolio-overlay">
+          <div class="portfolio-title">Re-Branding Palmolive</div>
+          <div class="portfolio-description">A playful, scientific rebranding strategy for Palmolive products.</div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300" alt="Ignite Habit Tracker">
+        <div class="portfolio-overlay">
+          <div class="portfolio-title">Ignite Habit Tracker</div>
+          <div class="portfolio-description">A gamified app that makes habit tracking fun and accessible.</div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300" alt="BreakTheIce Hackathon">
+        <div class="portfolio-overlay">
+          <div class="portfolio-title">BreakTheIce Hackathon</div>
+          <div class="portfolio-description">Award-winning UI design for an intuitive icebreaker activity app.</div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x300" alt="Food Truck Concept">
+        <div class="portfolio-overlay">
+          <div class="portfolio-title">Food Truck Concept</div>
+          <div class="portfolio-description">Sustainable, gym-focused food truck offering organic meals and drinks.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email me at <a href="mailto:anushka@uwaterloo.ca">anushka@uwaterloo.ca</a></p>
+    <p>Or connect with me on <a href="https://linkedin.com" target="_blank">LinkedIn</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Anushka Kshirsagar. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
